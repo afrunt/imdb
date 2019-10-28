@@ -12,6 +12,9 @@ Add client to your project:
 ### Usage
 Search for "Mortal Kombat":
 ```java
+import com.afrunt.imdb.model.*;
+import com.afrunt.imdb.reactiveclient.IMDbClient;
+//...
 new IMDbClient()
     .fluxFor(TitleBasics.class)
     .filter(titleBasics -> titleBasics.getPrimaryTitle().contains("Mortal Kombat"))
@@ -19,6 +22,9 @@ new IMDbClient()
 ```
 or simply find all Van Damme's 😆
 ```java
+import com.afrunt.imdb.model.*;
+import com.afrunt.imdb.reactiveclient.IMDbClient;
+//...
 new IMDbClient()
     .fluxFor(Name.class)
     .filter(name -> name.getPrimaryName().contains("Van Damme"))
