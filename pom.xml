@@ -23,7 +23,7 @@
     <groupId>com.afrunt.imdb</groupId>
     <artifactId>imdb</artifactId>
     <packaging>pom</packaging>
-    <version>1.0</version>
+    <version>1.0.7</version>
 
     <description>Open source library for working IMDb datasets</description>
     <url>https://github.com/afrunt/imdb</url>
@@ -58,7 +58,6 @@
             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
-
 
     <modules>
         <module>imdb-model</module>

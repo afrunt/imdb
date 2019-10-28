@@ -2,7 +2,6 @@ package com.afrunt.imdb.reactiveclient.test;
 
 import com.afrunt.imdb.model.*;
 import com.afrunt.imdb.reactiveclient.IMDbClient;
-import com.afrunt.imdb.model.InputStreamsProvider;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
