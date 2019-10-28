@@ -25,6 +25,7 @@
     <packaging>pom</packaging>
     <version>1.0.7</version>
 
+    <name>IMDb</name>
     <description>Open source library for working IMDb datasets</description>
     <url>https://github.com/afrunt/imdb</url>
 
