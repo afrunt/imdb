@@ -32,10 +32,10 @@ new IMDbClient()
 ```
 and much more...
 ### Model
-* Name
-* TitleAkas
-* TitleBasics
-* TitleCrew
-* TitleEpisode
-* TitlePrincipals
-* TitleRatings
+* com.afrunt.imdb.model.Name
+* com.afrunt.imdb.model.TitleAkas
+* com.afrunt.imdb.model.TitleBasics
+* com.afrunt.imdb.model.TitleCrew
+* com.afrunt.imdb.model.TitleEpisode
+* com.afrunt.imdb.model.TitlePrincipals
+* com.afrunt.imdb.model.TitleRatings
