@@ -10,17 +10,18 @@ Add client to your project:
 ```
 
 ### Usage
-Find all titles containing "Mortal Kombat" in primary title
+Search for "Mortal Kombat":
 ```java
 new IMDbClient()
     .fluxFor(TitleBasics.class)
     .filter(titleBasics -> titleBasics.getPrimaryTitle().contains("Mortal Kombat"))
     .subscribe(System.out::println);
 ```
-Find all Van Damme's 😆
+or simply find all Van Damme's 😆
 ```java
 new IMDbClient()
     .fluxFor(Name.class)
     .filter(name -> name.getPrimaryName().contains("Van Damme"))
     .subscribe(System.out::println);
 ```
+and much more...
