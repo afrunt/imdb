@@ -31,3 +31,11 @@ new IMDbClient()
     .subscribe(System.out::println);
 ```
 and much more...
+### Model
+* Name
+* TitleAkas
+* TitleBasics
+* TitleCrew
+* TitleEpisode
+* TitlePrincipals
+* TitleRatings
