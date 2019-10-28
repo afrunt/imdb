@@ -17,7 +17,7 @@ new IMDbClient()
     .filter(titleBasics -> titleBasics.getPrimaryTitle().contains("Mortal Kombat"))
     .subscribe(System.out::println);
 ```
-Fill all Van Damme's 😆
+Find all Van Damme's 😆
 ```java
 new IMDbClient()
     .fluxFor(Name.class)
