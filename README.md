@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/afrunt/imdb.svg?branch=master)](https://travis-ci.org/afrunt/imdb)
-## Java library for reading [IMDb datasets](https://www.imdb.com/interfaces/)  
+## Java library for reading from [IMDb datasets](https://www.imdb.com/interfaces/)  
 Add client to your project:
 ```xml
 <dependency>
