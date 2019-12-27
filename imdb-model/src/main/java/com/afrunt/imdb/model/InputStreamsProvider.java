@@ -29,6 +29,13 @@ import java.util.zip.GZIPInputStream;
 import static java.util.Map.entry;
 
 public class InputStreamsProvider {
+    public static final String URL_NAME_BASICS = "https://datasets.imdbws.com/name.basics.tsv.gz";
+    public static final String URL_TITLE_AKAS = "https://datasets.imdbws.com/title.akas.tsv.gz";
+    public static final String URL_TITLE_BASICS = "https://datasets.imdbws.com/title.basics.tsv.gz";
+    public static final String URL_TITLE_CREW = "https://datasets.imdbws.com/title.crew.tsv.gz";
+    public static final String URL_TITLE_EPISODE = "https://datasets.imdbws.com/title.episode.tsv.gz";
+    public static final String URL_TITLE_PRINCIPALS = "https://datasets.imdbws.com/title.principals.tsv.gz";
+    public static final String URL_TITLE_RATINGS = "https://datasets.imdbws.com/title.ratings.tsv.gz";
 
     public Supplier<InputStream> inputStreamSupplierFor(Class<? extends IMDbModel> type) {
         Map<Class, Supplier<InputStream>> suppliersMap = Map.ofEntries(
@@ -45,31 +52,31 @@ public class InputStreamsProvider {
     }
 
     public InputStream namesInputStream() {
-        return gzipStreamFromUrl("https://datasets.imdbws.com/name.basics.tsv.gz");
+        return gzipStreamFromUrl(URL_NAME_BASICS);
     }
 
     public InputStream titleAkasInputStream() {
-        return gzipStreamFromUrl("https://datasets.imdbws.com/title.akas.tsv.gz");
+        return gzipStreamFromUrl(URL_TITLE_AKAS);
     }
 
     public InputStream titleBasicInputStream() {
-        return gzipStreamFromUrl("https://datasets.imdbws.com/title.basics.tsv.gz");
+        return gzipStreamFromUrl(URL_TITLE_BASICS);
     }
 
     public InputStream titleCrewInputStream() {
-        return gzipStreamFromUrl("https://datasets.imdbws.com/title.crew.tsv.gz");
+        return gzipStreamFromUrl(URL_TITLE_CREW);
     }
 
     public InputStream titleEpisodeInputStream() {
-        return gzipStreamFromUrl("https://datasets.imdbws.com/title.episode.tsv.gz");
+        return gzipStreamFromUrl(URL_TITLE_EPISODE);
     }
 
     public InputStream titlePrincipalsInputStream() {
-        return gzipStreamFromUrl("https://datasets.imdbws.com/title.principals.tsv.gz");
+        return gzipStreamFromUrl(URL_TITLE_PRINCIPALS);
     }
 
     public InputStream titleRatingsInputStream() {
-        return gzipStreamFromUrl("https://datasets.imdbws.com/title.ratings.tsv.gz");
+        return gzipStreamFromUrl(URL_TITLE_RATINGS);
     }
 
     private InputStream gzipStreamFromUrl(String url) {

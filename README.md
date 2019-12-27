@@ -5,7 +5,7 @@ Add client to your project:
 <dependency>
   <groupId>com.afrunt.imdb</groupId>
   <artifactId>imdb-reactive-client</artifactId>
-  <version>1.0.7</version>
+  <version>1.0.8</version>
 </dependency>
 ```
 

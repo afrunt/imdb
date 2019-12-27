@@ -23,7 +23,7 @@
     <groupId>com.afrunt.imdb</groupId>
     <artifactId>imdb</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.7</version>
+    <version>1.0.8</version>
 
     <name>IMDb</name>
     <description>Open source library for working IMDb datasets</description>
