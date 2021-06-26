@@ -18,41 +18,36 @@
  */
 package com.afrunt.imdb.reactiveclient;
 
-import com.afrunt.imdb.iterator.IMDBbTsvIterator;
-import com.afrunt.imdb.mapper.ModelMapper;
 import com.afrunt.imdb.model.IMDbModel;
 import com.afrunt.imdb.model.InputStreamsProvider;
 import org.reactivestreams.Publisher;
 import reactor.core.publisher.Flux;
 
 public class IMDbClient {
-    private InputStreamsProvider inputStreamsProvider = new InputStreamsProvider();
+    private final com.afrunt.imdb.client.IMDbClient simpleClient;
 
     public IMDbClient() {
+        this(new InputStreamsProvider());
     }
 
     public IMDbClient(InputStreamsProvider inputStreamsProvider) {
-        this();
-        this.inputStreamsProvider = inputStreamsProvider;
+        this.simpleClient = new com.afrunt.imdb.client.IMDbClient(inputStreamsProvider);
     }
 
-    public <T extends IMDbModel> Publisher<T> publisherFor(Class<T> type) {
-        return fluxFor(type);
+    public <T extends IMDbModel> Publisher<T> publisherOf(Class<T> type) {
+        return fluxOf(type);
     }
 
-    public <T extends IMDbModel> Flux<T> fluxFor(Class<T> type) {
+    public <T extends IMDbModel> Flux<T> fluxOf(Class<T> type) {
         return modelFlux(type);
     }
 
     private <T extends IMDbModel> Flux<T> modelFlux(Class<T> type) {
         return Flux
                 .using(
-                        () -> new IMDBbTsvIterator(() -> inputStreamsProvider.inputStreamSupplierFor(type).get()),
-                        iterator -> Flux
-                                .fromIterable(iterator)
-                                .skip(1),
-                        IMDBbTsvIterator::close
-                )
-                .map(strings -> ModelMapper.forType(type).map(strings));
+                        () -> simpleClient.iteratorOf(type),
+                        Flux::fromIterable,
+                        com.afrunt.imdb.client.IMDbClient.IMDbIterator::close
+                );
     }
 }

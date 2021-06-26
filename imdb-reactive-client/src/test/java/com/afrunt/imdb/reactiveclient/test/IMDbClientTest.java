@@ -62,7 +62,7 @@ public class IMDbClientTest {
 
     @Test
     public void testNameBasics() {
-        List<Name> names = client.fluxFor(Name.class)
+        List<Name> names = client.fluxOf(Name.class)
                 .toStream()
                 .collect(Collectors.toList());
 
@@ -93,7 +93,7 @@ public class IMDbClientTest {
     @Test
     public void testTitleAkas() {
         List<TitleAkas> akas = client
-                .fluxFor(TitleAkas.class)
+                .fluxOf(TitleAkas.class)
                 .toStream()
                 .collect(Collectors.toList());
 
@@ -125,7 +125,7 @@ public class IMDbClientTest {
     @Test
     public void testTitleBasics() {
         List<TitleBasics> basics = client
-                .fluxFor(TitleBasics.class)
+                .fluxOf(TitleBasics.class)
                 .toStream()
                 .collect(Collectors.toList());
 
@@ -147,7 +147,7 @@ public class IMDbClientTest {
     @Test
     public void testTitleCrew() {
         List<TitleCrew> crews = client
-                .fluxFor(TitleCrew.class)
+                .fluxOf(TitleCrew.class)
                 .toStream()
                 .collect(Collectors.toList());
 
@@ -170,7 +170,7 @@ public class IMDbClientTest {
     @Test
     public void testTitleEpisode() {
         List<TitleEpisode> episodes = client
-                .fluxFor(TitleEpisode.class)
+                .fluxOf(TitleEpisode.class)
                 .toStream()
                 .collect(Collectors.toList());
 
@@ -192,7 +192,7 @@ public class IMDbClientTest {
     @Test
     public void testTitlePrincipals() {
         List<TitlePrincipals> principals = client
-                .fluxFor(TitlePrincipals.class)
+                .fluxOf(TitlePrincipals.class)
                 .toStream()
                 .collect(Collectors.toList());
 
@@ -222,7 +222,7 @@ public class IMDbClientTest {
     @Test
     public void testTitleRatings() {
         List<TitleRatings> ratings = client
-                .fluxFor(TitleRatings.class)
+                .fluxOf(TitleRatings.class)
                 .toStream()
                 .collect(Collectors.toList());
 

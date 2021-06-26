@@ -23,7 +23,7 @@
     <groupId>com.afrunt.imdb</groupId>
     <artifactId>imdb</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.8</version>
+    <version>1.0.9</version>
 
     <name>IMDb</name>
     <description>Open source library for working IMDb datasets</description>
@@ -64,6 +64,7 @@
         <module>imdb-model</module>
         <module>imdb-model-mapper</module>
         <module>imdb-tsv-iterator</module>
+        <module>imdb-client</module>
         <module>imdb-reactive-client</module>
     </modules>
 
@@ -104,6 +105,12 @@
             <dependency>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>imdb-tsv-iterator</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>imdb-client</artifactId>
                 <version>${project.version}</version>
             </dependency>
 

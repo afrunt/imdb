@@ -5,7 +5,7 @@ Add client to your project:
 <dependency>
   <groupId>com.afrunt.imdb</groupId>
   <artifactId>imdb-reactive-client</artifactId>
-  <version>1.0.8</version>
+  <version>1.0.9</version>
 </dependency>
 ```
 
@@ -16,7 +16,7 @@ import com.afrunt.imdb.model.*;
 import com.afrunt.imdb.reactiveclient.IMDbClient;
 //...
 new IMDbClient()
-    .fluxFor(TitleBasics.class)
+    .fluxOf(TitleBasics.class)
     .filter(titleBasics -> titleBasics.getPrimaryTitle().contains("Mortal Kombat"))
     .subscribe(System.out::println);
 ```
@@ -26,7 +26,7 @@ import com.afrunt.imdb.model.*;
 import com.afrunt.imdb.reactiveclient.IMDbClient;
 //...
 new IMDbClient()
-    .fluxFor(Name.class)
+    .fluxOf(Name.class)
     .filter(name -> name.getPrimaryName().contains("Van Damme"))
     .subscribe(System.out::println);
 ```

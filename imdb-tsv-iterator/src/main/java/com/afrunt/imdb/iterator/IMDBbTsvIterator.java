@@ -28,7 +28,7 @@ import java.util.NoSuchElementException;
 import java.util.function.Supplier;
 
 public class IMDBbTsvIterator implements Iterator<String[]>, Iterable<String[]>, Closeable {
-    private Supplier<InputStream> inputStreamSupplier;
+    private final Supplier<InputStream> inputStreamSupplier;
     private String[] next = null;
     private TsvParser tsvParser = null;
     private boolean finished = false;
